@@ -1,0 +1,92 @@
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-xs-4">
+        <div class="logo"> <a href="/"><img src="/assets/images/logo.png" /></a> </div>
+      </div>
+      <div class="col-sm-4 col-xs-4">
+        <div class="upload-btn-wrapper">
+        <button class="btn"><img src="/assets/images/upload-img.png"/>Course material</button>
+        <input type="file" name="myfile" />
+      </div>
+      </div>
+      <div class="col-sm-4 col-xs-4">
+        <div class="menu">
+          <ul class="nav navbar-nav">
+                <li><a href="javascript:void(0);">Logout</a></li>              </ul>
+        
+        </div>
+      </div>
+    </div>
+    </div>
+</header>
+<section class="main">
+<div class="course">
+  <div class="container">
+      <div id="custom_carousel" class="carousel slide">
+          <div class="controls">
+            <div class="row">                
+      <tabset  #staticTabs>
+          <tab *ngFor="let tabz of tabs;let i = index" [heading]="tabz.title" [active]="tabz.active" (select)="selectedTab(i)" [active]="tabz.active">
+              <div class="item">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <h2>{{tabz.title}}</h2>
+                          <p>{{tabz?.content}}</p>
+                      </div>
+                  </div>        
+          </div> 
+          </tab>          
+        </tabset>   
+
+       
+      </div>
+    </div>           
+</div> 
+
+    <div class="carousel slide">
+    
+       
+        <a class="left carousel-control" href="javascript:void(0);" (click)="prev()">
+    <span class=" glyphicon-chevron-left"><img src="/assets/images/prev.png"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="javascript:void(0);" (click)="next()">
+    <span class=" glyphicon-chevron-right"><img src="/assets/images/next.png"></span>
+    <span class="sr-only">Next</span>
+  </a>
+        <!-- End Carousel Inner -->
+        </div>
+    </div>
+    <!-- End Carousel -->
+</div>
+</section>
+
+<footer>
+  <div class="container">
+  	<div class="row">
+  		<div class="col-sm-5">
+  			<div class="footer-left">
+  				<div class="footer-logo"><img src="/assets/images/footer-logo.png"></div>
+  				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</p>
+  				<div class="footer-links">
+  					<ul>
+  						<li><a href="javascript:void(0);">ABOUT US</a></li>
+  						<li><a href="javascript:void(0);">FEATURES</a></li>
+  						<li><a href="javascript:void(0);">CONTACT</a></li>
+  					</ul>
+  				</div>
+  			</div>
+  		</div>
+  		<div class="col-sm-7">
+        <div class="footer-social">
+  				<a href="javascript:void(0);"><img src="/assets/images/facebook.png"></a>
+  				<a href="javascript:void(0);"><img src="/assets/images/twitter.png"></a>
+  				<a href="javascript:void(0);"><img src="/assets/images/googleplus.png"></a>
+               <a href="javascript:void(0);"><img src="/assets/images/instagram.png"></a>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  </footer>
